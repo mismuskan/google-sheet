@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet</title>
+    <link rel="icon" href="images/sheets.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section id="tool-bar">
+        <div id="current-cell"></div>
+        <button id="bold-btn" class="excel-btn"><i class="fa-solid fa-bold"></i></button>
+        <button id="itallic-btn" class="excel-btn"><i class="fa-solid fa-italic"></i></button>
+        <button id="underline-btn" class="excel-btn"><i class="fa-solid fa-underline"></i></button>
+        <div>
+            <button id="left-btn" class="excel-btn align-btn"><i class="fa-solid fa-align-left fa-xl"></i></button>
+            <button id="center-btn" class="excel-btn align-btn"><i class="fa-solid fa-align-center fa-xl"></i></button>
+            <button id="right-btn" class="excel-btn align-btn"><i class="fa-solid fa-align-right fa-xl"></i></button>
+        </div>
+        <select id="font-style-dropdown" class="btn">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans Serif</option>
+            <option value="monospace">monospace</option>
+            <option value="cursive">Cursive</option>
+        </select>
+        <select id="font-size-dropdown" class="btn">
+            <option value="16px">16</option>
+            <option value="12px">12</option>
+            <option value="14px">14</option>
+            <option value="18px">18</option>
+        </select>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; width: 5vw;">
+            <div class="colorContainer">
+                <label for="bgColor" class="btn"><i class="fa-solid fa-fill-drip fa-lg"></i></label>
+                <input type="color" id="bgColor" class="color-bar btn" value="#FFFFFF">
+            </div>
+
+            <div class="colorContainer">
+                <label for="fontColor" class="btn"><i class="fa-solid fa-a fa-lg"></i></label>
+                <input type="color" id="fontColor" class="color-bar btn">
+            </div>
+        </div>
+
+        <button id="cut-btn" class="btn"><i class="fa-solid fa-scissors fa-xl"></i></button>
+        <button id="copy-btn" class="btn"><i class="fa-solid fa-copy fa-xl"></i></button>
+        <button id="paste-btn" class="btn"><i class="fa-solid fa-paste fa-xl"></i></button>
+        <button id="fileDownload-btn" class="btn"><i class="fa-solid fa-file-arrow-down fa-2xl"></i></button>
+        <!-- <button id="upload-btn" class="btn" onclick="downloadMatrix()"><i
+                class="fa-solid fa-file-arrow-up fa-2xl"></i></button> -->
+        <input type="file" id="fileUpload-btn" accept='.json' />
+
+    </section>
+
+    <h3 id="sheet-no">Sheet No - 1</h3>
+    <div>
+        <button id="save-sheet-btn">Save</button>
+        <button id="add-sheet-btn">Add Sheet</button>
+    </div>
+    <br>
+    <div id="sheets-button-container">
+        <button id="sheet-1" onclick="viewSheet(event)">Sheet 1</button>
+    </div>
+    <br>
+
+    <table id="my-table">
+        <thead>
+            <tr id="table-heading-row">
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

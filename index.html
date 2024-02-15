@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet Clone</title>
+
+    <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAV1BMVEUAiXry8vL////z8/Pl5eXj4+MAhnYAgXD69/fg4ODC1tJ1rKPL3tr29PW80MxvqJ59sqkAfGtcoJXh6ejJ19XT5OFNmo7t6eqJuLHC0c+ry8WZu7Xt9PK90/qmAAADW0lEQVRogd1Zi3KrIBCFrFGMITFPk7b//52Xp7IoVIl0xkt3Mkex23KyB9ZdsoNiR4XV6jMO9gaAAyAA5MMEgIof8UlHQEF9abG6kljNK0BHoJ8iBd1Jg90eRkBPUQwgAAAD6YcMqwC89giIsDHQIozQOQNGIDI1AFKM2XCBt+QYCWNAEBsCc2GdMgXAAl4EQf8MjGgx8SGMs9v9eDh9YPcb41QHizRSq8WKtdTs8SyrD0d5fXSKmVoaUYTspVJel5J8PMrLi1mHihYV/uxVfe5ajqplRna9iPjjso5vQi6SGRQt7LkCJ3qUT09EcFvNt/B+A0Aiuk8zbsNn0Z+u3hzTcpx0Xl5NAF+XeK+OgETED9POG8blYM0i5weORFScpp2fmZytWbvI+YlrHVkRBWhpmZIDOy+kZRBRlBa1wARaHBF1YVrkvrqcljnR0jK1Gy+lhZsDWosoTIuaTqFlENGWaAFLy6/RQpOi5Q9EBDlFpL7XqIhSo4X6IirRqGy0NFU5Zwy0TEVLeW3OrWNfWg7su8H3p81szJ6IAAwt1YGhwU1mxtmc0TvpRYRoMV80yuuoAyJZLnZiaKEuLWJF0SzXy4S95Nb+546I3L1FrCgpp1VS8534IpIrqsEmeDrToxhAAAByMiUiQUs9JHghAA4AB/ROXBEB8EC0MLPsWcHCXFomRCTivD0P1nxzLaKvM7ofMBvnJ/1boy3XU2hjt9xFCvVElOsk0lnuFk+iLAe0FhfZbzedo+624DsXtEDKSaSP/Wzp3JSIPOcfpHP6nShP3uK+E21QRLq+FBcRJIkIILOIsqZzqqwQoyVJRPqA3l7yn11E8H+LSL7cLKcFtisimfKpEjfERJREiy5bZiwsFH8iIsjzBr29vQWJaPVo2bKIqBYR/CYiSKIlb3VuhohUsyOPiEyh+LisUOyJKG+Je9Xi/A8WEbBFC4/7vjLTYiS6Y7hftSFSABYR7dZr5XR9nwjsYO06TaiWGYeoq7hK++xpmkRIRLJm0u1u788af+8fVuBmq+0qqq0XuDTOU8HQUgS/2TrZNo0U5cABsWbrqP+eUJ3zn8G0BAG1DdkemCnMg2dGRIVqj+r6ZLw6V/QAMAAMkIhmFOWmq3OFvYNB3ycKGWZguJxr/wATGlgOvGzTiwAAAABJRU5ErkJggg=="
+  />
+    
+    <link rel="stylesheet" href="./options.css">
+    <link rel="stylesheet" href="./style.css">
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="header-part">
+    <div class="nav-menu">
+      <div class="menu-item">File</div>
+      <div class="menu-item active">Home</div>
+      <div class="menu-item">Insert</div>
+      <div class="menu-item">Layout</div>
+      <div class="menu-item">Help</div>
+    </div>
+  </div>  
+  <div id="options">
+      <form class="form">
+        <span class="material-icons copy">content_copy</span>
+        <span class="material-icons cut">content_cut</span>
+        <span class="material-icons paste">content_paste</span>
+        <select name="fontFamily" class="input">
+          <option value="poppins-regular">MonoSpace</option>
+          <option value="poppins-extra-bold">Extra Bold</option>
+          <option value="poppins-medium">Medium</option>
+        </select>
+          <input class="input" type="number" name="fontSize" min="8" max="32" value="16"></input>
+        
+        <div>
+        <input type="checkbox" id="bold" name="isBold"></input>
+        <label for="bold" class="material-icons">format_bold</label>
+       </div>
+
+        <div>
+          <input type="checkbox" id="italic" name="isItalic"></input>
+          <label for="italic" class="material-icons">format_italic</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="underline" name="isUnderline"></input>
+          <label for="underline"class="material-icons">format_underlined</label>
+        </div>
+      
+        <div>
+          <input type="radio" name="align" value="left" id="left" checked/>
+          <label for="left" class="material-icons">format_align_left</label>
+         
+          <input type="radio" name="align" value="center" id="center"/>
+          <label for="center" class="material-icons">format_align_center</label>
+
+        
+          <input type="radio" name="align" value="right" id="right"/>   
+          <label for="right" class="material-icons">format_align_right</label>
+        </div>
+
+
+        <div>
+           <input type="color" name="textColor" id="textColor"/>
+           <label for="textColor" class="material-icons">format_color_text</label>
+        </div>
+    
+        <div>
+           <input type="color" value="#ffffff" name="bgColor" id="bgColor"/>
+           <label for="bgColor" class="material-icons">format_color_fill</label>
+        </div>
+
+        <span onclick="exportData()" id="export" class="material-icons import-export download">cloud_download</span>
+        <span class="material-icons import-export open">cloud_upload</span>
+
+        <div>
+          <button id="merge">Merge</button>
+        </div>
+        <div>
+          <button id="zoom-in">Zoom In</button>
+          <button id="zoom-out">Zoom out</button>
+        </div>
+
+        <div class="search-replace">
+          <input type="text" id="searchInput" placeholder="Search">
+          <input type="text" id="replaceInput" placeholder="Replace">
+          <button id="fnrBtn">Submit</button>
+      </div>
+  
+
+        </form>
+
+   </div>
+   <div id="cell-state">
+    <div id="active-cell">Null</div>
+    <img class="formulae-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png">
+    <input type="text" class="formulae-bar"/>
+   </div>
+ <div id="root">
+  <div class="root-zoom">
+    <div id="header">
+        <div class="head-cell first"></div>  
+    </div>
+    <div id="body">
+        <div id="sno">
+          
+        </div>
+        <div id="body-container" class="root-zoom" >
+
+        </div>
+    </div>
+  </div>
+   
+ 
+   
+  </div>
+
+  <div class="footer">
+    <span class="material-icons new-Sheet">post_add</span>
+    <div class="sheet active-Sheet"><u>Sheet 1</u></div>
+ </div>
+
+
+
+ 
+
+
+  
+    
+    
+     <script src="functionality.js"></script>
+    <script src="index.js"></script>
+    
+   
+</body>
+</html>

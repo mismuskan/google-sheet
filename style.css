@@ -1,0 +1,167 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+
+}
+
+body{
+   overflow: hidden;
+   padding-left: 2px;
+}
+
+#root{
+    
+    width: 100vw;
+    height: 75vh;
+    overflow-x: auto;
+    margin-top: 30px;
+    position: relative;
+}
+.header-part{
+   display: flex; 
+   flex-direction: column;
+   background-color: #ecf0f1;
+   gap:10px;
+ 
+  
+}
+
+.nav-menu{
+    font-family: Arial;
+    display: flex;
+    height: 3rem;
+    background-color: #218c74;
+    position: sticky;
+    top: 0;
+    padding-left: 1rem;
+    align-items: flex-end;
+    gap: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+   
+}
+
+.menu-item{
+    width: 3.5rem;
+    height: 2rem;
+    color:#f1f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+
+}
+
+.menu-item:hover{
+    background-color: #83d088a8;
+    border-radius: 4px;
+    color: #218c74;
+}
+
+.active{
+    background-color: white;
+    color: #218c74;
+    border-top-left-radius: 4px ;
+    border-top-right-radius: 4px;
+}
+
+#header{
+    width: fit-content;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 120;
+    background-color: #fff;
+}
+
+.head-cell:first-child{
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-width: 40px !important;
+    padding: 0 .5px;
+    background-color: grey;
+}
+
+.head-cell{
+    height: 20px;
+    min-width: 200px;
+    border: .1px solid #C4C7C5;
+    border-top-width: 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#body{
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 40px auto;
+}
+
+#sno{
+    position: sticky;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.sno-cell{
+    height: 25px;
+    min-width: 30px;
+    font-size: 14px;
+    background-color: #F8f9FA;
+    border: .1px solid gray; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+.row {
+    display: flex; 
+}
+
+.cell {
+    border: .1px solid #C4C7C5;
+    min-width: 200px;
+    height: 25px;
+}
+
+.cell:focus{
+    outline:2px solid #1B72E8;
+}
+
+.import-export{
+    font-size: 32px !important;
+}
+.import-export:hover{
+    background-color:#d2d2d2 ;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    gap:30px;
+    background-color: rgb(224, 223, 223);
+    padding: 10px;
+    /* margin-inline-start: 20px; */
+    overflow-x: auto;
+    
+}
+
+.acive-Sheet:hover{
+    cursor: pointer;
+    background-color: rgb(138, 137, 136);
+}
+
+.formulae-icon{
+    width: 1.2rem;
+}
